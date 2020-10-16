@@ -1,5 +1,8 @@
+/** BOOTH'S ALGORITHM FOR BINARY MULTIPLICATION 8 BIT **/
 #include<stdio.h>
 #include <math.h>
+
+/* Declaring Functions */
 int booth[16]={0},M[8]={0},M_[8]={0},q=0;
 void multiplicand(int);
 void multiplier(int);
@@ -8,6 +11,7 @@ void arithmeticShiftRight();
 void neg();
 int dec();
 
+/* Main Function */
 int main(){
 	int a,b,n=8,i,sum=0;
 	printf("Enter the Multiplicand (less than 128 and greater then -129): ");
@@ -34,8 +38,13 @@ int main(){
 	}
 	printf("\nThe output in decimal is: ");
 	printf("%d",dec());
+	return 0;
 	
 }
+/* MAIN ENDS */
+
+
+/*FUNCTIONS BEGIN HERE  */
 void multiplier(int a){
 	if(a>=0){
 		int i=15;
