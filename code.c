@@ -45,6 +45,8 @@ int main(){
 
 
 /*FUNCTIONS BEGIN HERE  */
+
+/* Converts multiplier to binary and adds in booth array as Q*/
 void multiplier(int a){
 	if(a>=0){
 		int i=15;
@@ -67,6 +69,8 @@ void multiplier(int a){
 	}
 	
 }
+
+/*Converts multiplicand to binary*/
 void multiplicand(int a){
 	if(a>=0){
 		int i=7;
@@ -90,6 +94,7 @@ void multiplicand(int a){
 	
 }
 
+/*ADDS M or -M to AC*/
 void add(int m[8]){
 	int sum=0,carry=0,i;
 	for(i=7;i>=0;i--){
@@ -107,6 +112,7 @@ void add(int m[8]){
 	}	
 }
 
+/* neg() creates -M from M */
 void neg(){
 	int i,carry=0,sum=0;
 	for(i=0;i<8;i++){
@@ -156,5 +162,5 @@ int dec()
 	else
 		return result;
 }
-
+/*FUNCTIONS END*/
 
